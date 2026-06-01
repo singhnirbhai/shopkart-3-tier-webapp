@@ -5,8 +5,8 @@ agent any
 
 environment {
 
-    FRONTEND_IMAGE = "singhnirbhai/frontend"
-    BACKEND_IMAGE  = "singhnirbhai/backend"
+    FRONTEND_IMAGE = "nirbhaisingh/frontend"
+    BACKEND_IMAGE  = "nirbhaisingh/backend"
 
     IMAGE_TAG = "${BUILD_NUMBER}"
 
