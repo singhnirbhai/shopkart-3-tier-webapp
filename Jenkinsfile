@@ -25,6 +25,10 @@ stages {
     stage('SonarQube Scan') {
         steps {
 
+            script {
+            scannerHome = tool 'sonar-scanner'
+        }
+
             withCredentials([
                 string(
                     credentialsId: 'sonar-token',
