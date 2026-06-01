@@ -45,6 +45,7 @@ stages {
                 -Dsonar.token=${SONAR_TOKEN}
                 """
             }
+          }
         }
     }
 
