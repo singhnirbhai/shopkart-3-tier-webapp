@@ -1,0 +1,26 @@
+apiVersion: batch/v1
+kind: Job
+
+metadata:
+  name: seed-job
+  namespace: shopkart
+
+spec:
+  template:
+    spec:
+
+      restartPolicy: Never
+
+      containers:
+      - name: seed
+
+        image: YOUR_DOCKERHUB/backend:v1
+
+        command:
+        - npm
+        - run
+        - seed
+
+        env:
+        - name: MONGO_URI
+          value: mongodb://mongodb:27017/shopkart
