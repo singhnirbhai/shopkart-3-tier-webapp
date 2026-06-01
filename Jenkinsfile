@@ -27,7 +27,8 @@ stages {
 
             script {
           def scannerHome = tool 'sonar-scanner'
-        }
+
+            echo "Scanner Path: ${scannerHome}"
 
             withCredentials([
                 string(
@@ -36,13 +37,13 @@ stages {
                 )
             ]) {
 
-                sh '''
+                sh """
                 ${scannerHome}/bin/sonar-scanner \
                 -Dsonar.projectKey=shopkart \
                 -Dsonar.sources=. \
-                -Dsonar.host.url=$SONAR_HOST_URL \
-                -Dsonar.token=$SONAR_TOKEN
-                '''
+                -Dsonar.host.url=http://localhost:9000 \
+                -Dsonar.token=${SONAR_TOKEN}
+                """
             }
         }
     }
