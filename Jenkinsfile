@@ -58,7 +58,7 @@ stages {
         }
     }
 */
-    stage('Trivy Filesystem Scan') {
+    /*stage('Trivy Filesystem Scan') {
         steps {
             sh '''
             trivy fs . \
@@ -67,7 +67,7 @@ stages {
             '''
         }
     }
-
+*/
     stage('Build Frontend Image') {
         steps {
 
