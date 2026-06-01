@@ -37,7 +37,7 @@ stages {
             ]) {
 
                 sh '''
-                sonar-scanner \
+                ${scannerHome}/bin/sonar-scanner \
                 -Dsonar.projectKey=shopkart \
                 -Dsonar.sources=. \
                 -Dsonar.host.url=$SONAR_HOST_URL \
