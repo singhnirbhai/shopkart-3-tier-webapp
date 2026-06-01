@@ -1,6 +1,6 @@
 pipeline {
 
-```
+
 agent any
 
 environment {
@@ -240,6 +240,6 @@ post {
         sh 'docker image prune -f || true'
     }
 }
-```
+
 
 }
