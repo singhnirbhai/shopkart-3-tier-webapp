@@ -26,7 +26,7 @@ stages {
         steps {
 
             script {
-            scannerHome = tool 'sonar-scanner'
+          def scannerHome = tool 'sonar-scanner'
         }
 
             withCredentials([
