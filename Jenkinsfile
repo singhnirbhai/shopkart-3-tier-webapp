@@ -13,7 +13,7 @@ stages {
     stage('Build Frontend') {
         steps {
             dir('Frontend') {
-                sh 'docker build -t Frontend:test .'
+                sh 'docker build -t frontend:test .'
             }
         }
     }
