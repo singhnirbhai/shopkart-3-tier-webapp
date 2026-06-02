@@ -154,7 +154,7 @@ stages {
 
             sh '''
 
-            kubectl apply -f k8s/namespace.yaml --validate=false
+            kubectl apply -f k8s/namespace.yaml 
 
             kubectl apply -f k8s/mongodb-pvc.yaml
 
