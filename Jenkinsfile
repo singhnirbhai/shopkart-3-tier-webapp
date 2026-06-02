@@ -49,7 +49,7 @@ stages {
         }
     }
 
-   /* stage('OWASP Dependency Check') {
+    stage('OWASP Dependency Check') {
         steps {
             dependencyCheck(
                 additionalArguments: '--scan .',
@@ -57,8 +57,8 @@ stages {
             )
         }
     }
-*/
-    /*stage('Trivy Filesystem Scan') {
+
+    stage('Trivy Filesystem Scan') {
         steps {
             sh '''
             trivy fs . \
@@ -67,7 +67,7 @@ stages {
             '''
         }
     }
-*/
+
     stage('Build Frontend Image') {
         steps {
 
@@ -113,7 +113,7 @@ stages {
 
             withCredentials([
                 usernamePassword(
-                    credentialsId: 'dockerpassword',
+                    credentialsId: 'dockerhub',
                     usernameVariable: 'DOCKER_USER',
                     passwordVariable: 'DOCKER_PASS'
                 )
