@@ -28,7 +28,7 @@ spec:
       containers:
       - name: frontend
 
-        image: YOUR_DOCKERHUB/frontend:v1
+        image: your_dockerhub/frontend:v1
 
         ports:
         - containerPort: 3000
