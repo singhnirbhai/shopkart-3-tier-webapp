@@ -32,7 +32,7 @@ stages {
 
             withCredentials([
                 string(
-                    credentialsId: 'sonar-token',
+                    credentialsId: 'sonar-scanner',
                     variable: 'SONAR_TOKEN'
                 )
             ]) {
